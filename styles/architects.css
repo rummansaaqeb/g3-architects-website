@@ -12,6 +12,10 @@
     display: flex;
 }
 
+.text-primary {
+    color: rgb(255, 144, 14);
+}
+
 /* dark 02 */
 .text-gray {
     color: rgb(66, 66, 66);
@@ -22,11 +26,11 @@
     color: rgb(114, 114, 114);
 }
 
-.bg-light{
+.bg-light {
     background: rgba(255, 144, 14, 0.1);
 }
 
-.btn-primary{
+.btn-primary {
     background: rgb(255, 144, 14);
     color: white;
     padding: 20px 25px;
@@ -34,6 +38,20 @@
     font-weight: 600;
     border-radius: 8px;
     border: none;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main>section {
+    margin-top: 130px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 
@@ -45,7 +63,7 @@
     align-items: center;
 }
 
-.brand{
+.brand {
     font-weight: 700;
     font-size: 3rem;
 }
@@ -60,32 +78,84 @@
     font-weight: 500;
 }
 
-.navbar, .banner{
+.navbar,
+.banner {
     max-width: 1440px;
     margin: 0 auto;
 }
 
 /* banner related styles */
-.banner-content{
+.banner-content {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 50px;
 
 }
-.banner-title{
+
+.banner-title {
     font-weight: 700;
     font-size: 4rem;
 }
 
-.banner-image{
+.banner-image {
     width: 100%;
+}
+
+/* team and feature related styles */
+
+.teams {
+    align-items: center;
+}
+
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our-features {
+    margin-left: 130px;
+    max-width: 530px;
+}
+
+
+
+#quick-list {
+    font-weight: 500;
+}
+
+.feature-description {
+
 }
 
 /* responsive media query */
 
 @media screen and (max-width: 576px) {
-    .navbar, .nav-links{
+
+    .navbar,
+    .nav-links,
+     .teams {
         flex-direction: column;
+    }
+
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our-features{
+        margin-left: 20px;
+        text-align: center;
+    }
+}
+
+/* medium size devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams{
+        flex-direction: column;
+    }
+
+    .our-features{
+        margin: 50 auto;
     }
 }
